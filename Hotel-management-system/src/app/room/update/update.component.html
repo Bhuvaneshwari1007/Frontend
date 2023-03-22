@@ -1,0 +1,29 @@
+<h2>Edit Room</h2>
+<div class="container min-vh-70 d-flex justify-content-center align-items-center">
+
+    <form [formGroup]="updateRoom" (ngSubmit)="UpdateData()" #myForm="ngForm">
+        <div class="mb-3">
+            <label for="roomType" class="form-label">Room Type</label>
+            <select class="custom-select" name="roomType" class="form-control" formControlName="roomType" placeholder="Role" required="required">
+            
+                    <option value="Room Type" selected>Room Type</option>
+                    <option value="Single Cot">Single Cot - Rs.1000</option>                    
+                    <option value="Double Cot">Double Cot - Rs.2000</option>                   
+                    <option value="Deluxe">Deluxe - Rs.4000</option>
+                    <option value="Executive-suite">Executive-suite - Rs.6000</option>
+                    <option value="Honeymoon-suite">Honeymoon-suite - Rs.7000</option>
+                    <option value="Presidential-suite">Presidential-suite - Rs.8000</option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label for="roomStatus" class="form-label">Room Status</label>
+            <select class="custom-select" name="roomStatus" class="form-control" formControlName="roomStatus" placeholder="Room Status" required="required">
+            <option value="Room Status" selected>Room Status</option>
+            <option value="Available">Available</option>
+            <option value="Unavailable">Unvailable</option>
+        </select>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</div>

@@ -1,0 +1,71 @@
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-4">
+        <b> <a class="navbar-brand text-white">Update Guest</a></b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon text-black"></span>     
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="guest/all">Guest Details</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<h3>Update Guest Details</h3><br>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="container min-vh-70 d-flex justify-content-center align-items-center">
+                <form [formGroup]="creationForm" (ngSubmit)="update()" #myForm="ngForm">
+                    <br>
+                    <div class="form-group">
+                        <label> Name </label>
+                        <input [class.is-invalid]="creationForm.get('name')?.touched && creationForm.get('name')?.invalid" type="text" class="form-control" formControlName="name" name="name" placeholder="Enter your Name" required="required">
+                        <div *ngIf="creationForm.get('name')?.touched && creationForm.get('name')?.invalid">
+                            <small *ngIf="creationForm.get('name')?.errors!['required']" class="text-danger"> Enter Name</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Contact </label>
+                        <input [class.is-invalid]="creationForm.get('contact')?.touched && creationForm.get('contact')?.invalid" type="number" class="form-control" formControlName="contact" name="contact" placeholder="Enter Contact No" required="required">
+                        <div *ngIf="creationForm.get('contact')?.touched && creationForm.get('contact')?.invalid">
+                            <small *ngIf="creationForm.get('contact')?.errors!['required']" class="text-danger"> Enter contact number </small>
+                            <div *ngIf="creationForm.get('contact')?.errors!['pattern']" class="text-danger">Please, Enter 10 digit Contact Number.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Gender </label>
+                        <input [class.is-invalid]="creationForm.get('gender')?.touched && creationForm.get('gender')?.invalid" type="text" class="form-control" formControlName="gender" name="gender" placeholder="Enter your gender" required="required">
+                        <div *ngIf="creationForm.get('gender')?.touched && creationForm.get('gender')?.invalid">
+                            <small *ngIf="creationForm.get('gender')?.errors!['required']" class="text-danger"> Enter gender </small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Email </label>
+                        <input [class.is-invalid]="creationForm.get('email')?.touched && creationForm.get('email')?.invalid" type="email" class="form-control" formControlName="email" name="email" placeholder="Enter your email Id" required="required">
+                        <div *ngIf="creationForm.get('email')?.touched && creationForm.get('email')?.invalid">
+                            <small *ngIf="creationForm.get('gender')?.errors!['required']" class="text-danger"> Enter email-id </small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Address </label>
+                        <input [class.is-invalid]="creationForm.get('address')?.touched && creationForm.get('address')?.invalid" type="text" class="form-control" formControlName="address" name="email" placeholder="Enter your address" required="required">
+                        <div *ngIf="creationForm.get('address')?.touched && creationForm.get('address')?.invalid">
+                            <small *ngIf="creationForm.get('address')?.errors!['required']" class="text-danger"> Enter address </small>
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary" [disabled]="!myForm.form.valid">submit</button>
+                    <br><br> </form>
+            </div>
+        </div>
+    </div>
+</div>

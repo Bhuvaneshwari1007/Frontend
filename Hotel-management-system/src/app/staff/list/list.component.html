@@ -1,0 +1,59 @@
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-4">
+
+        <b> <a class="navbar-brand text-white">Staff Details</a></b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon text-black"></span>     
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+                &nbsp; &nbsp;
+                <li class="nav-item">
+                    <a class="nav-link text-white" (click)="navigate()" role="button">Dashboard</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"       rel="stylesheet">
+</head>
+<h3>Staff Details</h3>
+<br>
+<div style="float: right;">
+    <a [routerLink]="['/staff/add']" class="text-primary"><button class="btn btn-light"><i class="material-icons" id="add">&#xe7fe;</i>Add Staff</button></a> &nbsp;
+    <br><br>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Employee Name</th>
+            <th>Phone No</th>
+            <th>email</th>
+            <th>Age</th>
+            <th>Employee Address</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let staff of staffs">
+            <td> {{ staff.id }}</td>
+            <td> {{ staff.employeeName }}</td>
+            <td> {{ staff.phoneNo }}</td>
+            <td> {{ staff.email }}</td>
+            <td> {{ staff.age }}</td>
+            <td> {{ staff.employeeAddress }}</td>
+            <td> {{ staff.salary }}</td>
+            <td>
+                <a [routerLink]="['/staff/update', staff.id]" class="text-warning"><i class="material-icons" id="edit">&#xf88d;</i></a>&nbsp;
+                <a (click)="deleteStaff(staff.id)" role="button" class="text-danger"><i class="material-icons" id="delete">&#xe92b;</i></a>&nbsp;
+            </td>
+
+        </tr>
+    </tbody>
+</table>

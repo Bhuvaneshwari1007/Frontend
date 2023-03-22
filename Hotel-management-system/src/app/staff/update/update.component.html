@@ -1,0 +1,72 @@
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-4">
+
+        <b> <a class="navbar-brand text-white">Update Staff</a></b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon text-black"></span>     
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="staff/all">Staff Details</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<h2>Update Staff</h2>
+<br>
+<div class="container min-vh-70 d-flex justify-content-center align-items-center">
+    <form [formGroup]="updateStaff" (ngSubmit)="UpdateData()" #myForm="ngForm">
+        <div class="form-group">
+            <label for="employeeName" class="form-label">Employee Name</label>
+            <input [class.is-invalid]="updateStaff.get('employeeName')?.touched && updateStaff.get('employeeName')?.invalid" type="text" class="form-control" formControlName="employeeName" name="employeeName" placeholder="Enter Employee Name" required="required">
+            <div *ngIf="updateStaff.get('employeeName')?.touched && updateStaff.get('employeeName')?.invalid">
+                <small *ngIf="updateStaff.get('employeeName')?.errors!['required']" class="text-danger"> Employee Name is required</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phoneNo" class="form-label">Phone Number</label>
+            <input [class.is-invalid]="updateStaff.get('phoneNo')?.touched && updateStaff.get('phoneNo')?.invalid" type="number" class="form-control" formControlName="phoneNo" name="phoneNo" placeholder="Enter Phone No" required="required">
+            <div *ngIf="updateStaff.get('phoneNo')?.touched && updateStaff.get('phoneNo')?.invalid">
+                <small *ngIf="updateStaff.get('phoneNo')?.errors!['required']" class="text-danger"> Phone Number is required</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input [class.is-invalid]="updateStaff.get('email')?.touched && updateStaff.get('email')?.invalid" type="email" class="form-control" formControlName="email" name="email" placeholder="Enter Email id" required="required">
+            <div *ngIf="updateStaff.get('email')?.touched && updateStaff.get('email')?.invalid">
+                <small *ngIf="updateStaff.get('email')?.errors!['required']" class="text-danger"> Email Id is required</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="age" class="form-label">Age</label>
+            <input [class.is-invalid]="updateStaff.get('age')?.touched && updateStaff.get('age')?.invalid" type="number" class="form-control" formControlName="age" name="age" placeholder="Enter age" required="required">
+            <div *ngIf="updateStaff.get('age')?.touched && updateStaff.get('age')?.invalid">
+                <small *ngIf="updateStaff.get('age')?.errors!['required']" class="text-danger"> Age is required</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="employeeAddress" class="form-label">Employee Address</label>
+            <input [class.is-invalid]="updateStaff.get('employeeAddress')?.touched && updateStaff.get('employeeAddress')?.invalid" type="text" class="form-control" formControlName="employeeAddress" name="employeeAddress" placeholder="Enter Address" required="required">
+            <div *ngIf="updateStaff.get('employeeAddress')?.touched && updateStaff.get('employeeAddress')?.invalid">
+                <small *ngIf="updateStaff.get('employeeAddress')?.errors!['required']" class="text-danger"> Employee Address is required</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="salary" class="form-label">Salary</label>
+            <input [class.is-invalid]="updateStaff.get('salary')?.touched && updateStaff.get('salary')?.invalid" type="text" class="form-control" formControlName="salary" name="salary" placeholder="Enter Salary" required="required">
+            <div *ngIf="updateStaff.get('salary')?.touched && updateStaff.get('salary')?.invalid">
+                <small *ngIf="updateStaff.get('salary')?.errors!['required']" class="text-danger"> Salary is required</small>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!myForm.form.valid">Submit</button>
+        </form>
+</div>

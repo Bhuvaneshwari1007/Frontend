@@ -1,0 +1,43 @@
+/* input {
+    width: 60%;
+    padding: 8px 2px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    background: linear-gradient(to right, lightblue, rgb(59, 59, 100));
+    border: 1px solid rgb(255, 254, 254);
+    color: white;
+}
+
+tr,
+td {
+    border: 2px solid #3B3B64;
+    color: #3B3B64;
+}
+
+td,
+th {
+    text-align: center;
+    padding: 8px;
+    background-color: #def3f8;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, lightblue, rgb(59, 59, 100));
+}
+
+.btn {
+    background: linear-gradient(to right, lightblue, rgb(59, 59, 100));
+    color: white;
+    font-size: 20px;
+} */

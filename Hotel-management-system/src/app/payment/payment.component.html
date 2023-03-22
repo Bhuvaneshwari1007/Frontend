@@ -1,0 +1,61 @@
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-4">
+        <div class="container">
+            <b> <a class="navbar-brand text-white">Rooms</a></b>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon text-black"></span>     
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mx-auto"></div>
+                <ul class="navbar-nav">
+                    &nbsp; &nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link text-white" (click)="navigate()" role="button">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<h1>Rooms</h1>
+<br>
+<div class="row">
+    <div class="column">
+        <img src="/assets/images/single.jpg"  style="width:100%">
+            <h3>Single Cot</h3>
+            <p class="price">Rs.1000/-</p>
+                <p><button (click)="makePayment(1000)">Book now</button></p>
+                </div>
+                <div class="column">
+                    <img src="assets/images/double.jpg"  style="width:100%">
+                        <h3>Double cot</h3>
+                        <p class="price">Rs.2000/-</p>
+                            <p><button (click)="makePayment(2000)">Book now</button></p>
+                            </div>
+                            <div class="column">
+                                <img src="assets/images/deluxe.jpg"  style="width:100%">
+                                    <h3>Deluxe</h3>
+                                    <p class="price">Rs.4000/-</p>
+                                        <p><button (click)="makePayment(4000)">Book now</button></p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">
+                                                <img src="/assets/images/exe.jpg"  style="width:100%">
+                                                    <h3>Executive Suite</h3>
+                                                    <p class="price">Rs.6000/-</p>
+                                                        <p><button (click)="makePayment(6000)">Book now</button></p>
+                                                        </div>
+                                                        <div class="column">
+                                                            <img src="/assets/images/honeymoon.jpg"  style="width:100%">
+                                                                <h3>Honeymoon Suite</h3>
+                                                                <p class="price">Rs.7000/-</p>
+                                                                    <p><button (click)="makePayment(7000)">Book now</button></p>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <img src="/assets/images/pres.jpg"  style="width:100%">
+                                                                            <h3>Presidential Suite</h3>
+                                                                            <p class="price">Rs.8000/-</p>
+                                                                                <p><button (click)="makePayment(8000)">Book now</button></p>
+                                                                                </div>
+                                                                                </div>

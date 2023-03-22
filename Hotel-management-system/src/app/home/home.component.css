@@ -1,0 +1,150 @@
+    nav {
+        background: linear-gradient(to right, lightblue, rgb(59, 59, 100));
+        height: 0px;
+    }
+    
+    .button-css {
+        border: 2px solid #fff;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        padding: 15px 35px;
+        color: white;
+        background: transparent;
+    }
+    
+    .button-css:hover {
+        box-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255, 1);
+        background-color: rgb(253, 253, 253);
+        background: transparent;
+    }
+    
+    .button-css-contact {
+        border: 2px solid rgb(37, 37, 37);
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        padding: 15px 35px;
+        color: rgb(37, 37, 37);
+        background: transparent;
+    }
+    
+    .button-css-contact:hover {
+        box-shadow: 0px 0px 10px rgb(37, 36, 36), 0px 0px 10px rgb(37, 36, 36, 1);
+        background-color: rgb(37, 36, 36);
+        background: transparent;
+    }
+    
+    .div-left,
+    .div-right {
+        width: 50%;
+    }
+    
+    .div-left {
+        float: left;
+        left: 0;
+    }
+    
+    .div-right {
+        float: right;
+        text-align: center;
+        right: 0;
+    }
+    
+    .button-css-signin {
+        border: 2px solid rgb(37, 37, 37);
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 30px;
+        color: rgb(255, 255, 255);
+        background-color: black;
+    }
+    
+    .button-css-signin:hover {
+        box-shadow: 0px 0px 10px rgb(245, 245, 245), 0px 0px 10px rgb(243, 243, 243);
+        background-color: rgb(236, 233, 233);
+        color: black;
+        background: transparent;
+    }
+    
+    .inner {
+        overflow: hidden;
+    }
+    
+    .inner img {
+        transition: all 1.5s ease;
+    }
+    
+    .inner:hover img {
+        transform: scale(1.5);
+    }
+    
+    .contact-us {
+        padding: 70px 0px;
+    }
+    
+    .section-title h2 {
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        border-bottom: 5px solid #af8070;
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+    
+    .section-title p {
+        color: #e8e8e8;
+        margin-bottom: 30px;
+    }
+    
+    .contact-us input,
+    .contact-us textarea {
+        background: #fafafa;
+    }
+    
+    .contact-us textarea {
+        min-height: 188px;
+        max-width: 100%;
+    }
+    
+    .contact-us .map {
+        overflow: hidden;
+        border-radius: 4px;
+    }
+    
+    .button-css-contact-form {
+        border: 2px solid rgb(7, 7, 7);
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        padding: 15px 35px;
+        color: rgb(5, 5, 5);
+        background-color: white;
+        ;
+    }
+    
+    .button-css-contact-form:hover {
+        box-shadow: 0px 0px 10px rgb(245, 245, 245), 0px 0px 10px rgb(243, 243, 243);
+        background-color: rgb(236, 233, 233);
+        color: black;
+    }
+    
+    .fade-scroll {
+        background: linear-gradient(to right, lightblue, rgb(59, 59, 100));
+    }
+    
+    .card {
+        border: 2px solid rgb(7, 7, 7);
+        padding: 70px, 500px;
+    }

@@ -1,0 +1,62 @@
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-4">
+        <div class="container">
+            <b> <a class="navbar-brand text-white">Guest Details</a></b>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon text-black"></span>     
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mx-auto"></div>
+                <ul class="navbar-nav">
+                    &nbsp; &nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link text-white" (click)="navigate()" role="button">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"       rel="stylesheet">
+
+</head>
+
+<body>
+    <div style="float: right;">
+        <br><br><br>
+        <a [routerLink]="['/guest/add']" class="color text-primary">
+            <button class="btn btn-light"><i class="material-icons" id="add"> &#xe7fe;</i>Add Guest</button></a> &nbsp;
+        <br><br>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Guest Id</th>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Gender</th>
+                <th>email</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let guest of guests">
+                <td> {{ guest.guestId }}</td>
+                <td> {{ guest.name }}</td>
+                <td> {{ guest.contact }}</td>
+                <td> {{ guest.gender }}</td>
+                <td> {{ guest.email }}</td>
+                <td> {{ guest.address }}</td>
+                <td>
+                    <a [routerLink]="['/guest/update',guest.guestId]" class="text-warning"><i class="material-icons" id="edit">&#xf88d;</i></a>&nbsp;
+                    <a (click)="deleteguest(guest.guestId)" role="button" class="text-danger"><i class="material-icons" id="delete">&#xe92b;</i></a>&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>

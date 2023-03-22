@@ -1,0 +1,47 @@
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-4">
+
+        <b> <a class="navbar-brand text-white">Update Inventory</a></b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon text-black"></span>     
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="inventory/all">Inventory Details</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<h2>Edit Inventory</h2>
+<div class="container min-vh-70 d-flex justify-content-center align-items-center">
+    <form [formGroup]="updateForm" (ngSubmit)="update()" #myForm="ngForm">
+        <div class="mb-3">
+            <label for="inventoryType" class="form-label">Inventory Type</label>
+            <input [class.is-invalid]="updateForm.get('inventoryType')?.touched && updateForm.get('inventoryType')?.invalid" type="text" class="form-control" formControlName="inventoryType" name="inventoryType" placeholder="Enter Inventory Type" required="required">
+            <div *ngIf="updateForm.get('inventoryType')?.touched && updateForm.get('inventoryType')?.invalid">
+                <small *ngIf="updateForm.get('inventoryType')?.errors!['required']" class="text-danger"> Inventory Type is required</small>
+
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="inventoryName" class="form-label">Inventory Name</label>
+            <input [class.is-invalid]="updateForm.get('inventoryName')?.touched && updateForm.get('inventoryName')?.invalid" type="text" class="form-control" formControlName="inventoryName" name="inventoryName" placeholder="Enter Inventory Name" required="required">
+            <div *ngIf="updateForm.get('inventoryName')?.touched && updateForm.get('inventoryName')?.invalid">
+                <small *ngIf="updateForm.get('inventoryName')?.errors!['required']" class="text-danger"> Inventory Name is required</small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="inventoryQuantity" class="form-label">Inventory Quantity </label>
+            <input [class.is-invalid]="updateForm.get('inventoryQuantity')?.touched && updateForm.get('inventoryQuantity')?.invalid" type="number" class="form-control" formControlName="inventoryQuantity" name="inventoryQuantity" placeholder="Enter Quantity" required="required">
+            <div *ngIf="updateForm.get('inventoryQuantity')?.touched && updateForm.get('inventoryQuantity')?.invalid">
+                <small *ngIf="updateForm.get('inventoryQuantity')?.errors!['required']" class="text-danger"> Quantity is required</small>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!myForm.form.valid">Submit</button>
+    </form>
+
+</div>

@@ -1,0 +1,61 @@
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-4">
+        <b> <a class="navbar-brand text-white">Add Reservation</a></b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon text-black"></span>     
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="res/all">Reservation Details</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+
+            <div class="container min-vh-80 d-flex justify-content-center align-items-center">
+
+                <form [formGroup]="addReservation" #myForm="ngForm">
+                    <div>
+                        <label for="name"  class="form-label">Name</label>
+                            <input [class.is-invalid]="addReservation.get( 'name')?.touched && addReservation.get( 'name')?.invalid" type="text" class="form-control" formControlName="name" name="name" placeholder="Enter Name" required="required ">
+                            <div *ngIf="addReservation.get( 'name')?.touched && addReservation.get( 'name')?.invalid ">
+                                <small *ngIf="addReservation.get( 'name')?.errors![ 'required'] " class="text-danger "> Name is required</small>
+                            </div>
+                    </div>
+                    <div>
+                        <label for="gender"  class="form-label">Gender</label>
+                            <input [class.is-invalid]="addReservation.get( 'gender')?.touched && addReservation.get( 'gender')?.invalid" type="text" class="form-control" formControlName="gender" name="gender" placeholder="Enter Gender" required="required ">
+                            <div *ngIf="addReservation.get( 'gender')?.touched && addReservation.get( 'gender')?.invalid ">
+                                <small *ngIf="addReservation.get( 'gender')?.errors![ 'required'] " class="text-danger "> Enter Gender</small>
+                            </div>
+                    </div>
+                    <div>
+                        <label for="checkIn"  class="form-label"> Check In </label>
+                            <input [class.is-invalid]="addReservation.get( 'checkIn')?.touched && addReservation.get( 'checkIn')?.invalid " type="date" min="{{CurrentDate | date:'yyyy-MM-dd'}}" class="form-control" formControlName="checkIn" name="checkIn" placeholder="Enter checkIn Date
+        " required="required ">
+                            <div *ngIf="addReservation.get( 'checkIn')?.touched && addReservation.get( 'checkIn')?.invalid ">
+                                <small *ngIf="addReservation.get( 'checkIn')?.errors![ 'required'] " class="text-danger "> Enter Check In Date</small>
+                            </div>
+                    </div>
+                    <div>
+                        <label for="checkOut"  class="form-label"> Check Out </label>
+                            <input [class.is-invalid]="addReservation.get( 'checkOut')?.touched && addReservation.get( 'checkOut')?.invalid " type="date" min="{{CurrentDate | date:'yyyy-MM-dd'}}" class="form-control" formControlName="checkOut" name="checkOut" placeholder="Enter checkOut Date
+        " required="required ">
+                            <div *ngIf="addReservation.get( 'checkOut')?.touched && addReservation.get( 'checkOut')?.invalid ">
+                                <small *ngIf="addReservation.get( 'checkOut')?.errors![ 'required'] " class="text-danger "> Enter Check Out Date</small>
+                            </div>
+                    </div>
+                    <br>
+                    <button type="submit"  (click)="addRes()" class="btn btn-primary" [disabled]="!myForm.form.valid">Submit</button>
+
+                        </form>
+            </div>
+        </div>
+    </div>

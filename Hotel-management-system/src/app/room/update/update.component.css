@@ -1,0 +1,20 @@
+input {
+    width: 250px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: cursive;
+    background: linear-gradient(to right, lightblue, rgb(59, 59, 100));
+    padding: 20px;
+    color: white;
+}
+
+.container {
+    background-color: #def3f8;
+    color: rgb(3, 3, 3);
+    width: 40%;
+    text-align: center;
+    background-size: cover;
+}

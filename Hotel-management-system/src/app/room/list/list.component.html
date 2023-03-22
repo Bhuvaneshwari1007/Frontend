@@ -1,0 +1,71 @@
+<!-- <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"       rel="stylesheet">
+</head>
+
+<h1>Room Details</h1>
+<div style="float: right;">
+    <a [routerLink]="['/room/add']" class="text-primary"><button class="btn btn-light"><i class="material-icons" id="add">&#xe7fe;</i>Add Room</button></a> &nbsp;
+    <br><br>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Room Number</th>
+            <th>Room Type</th>
+            <th>Room Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let room of rooms">
+            <td> {{ room.roomNumber}}</td>
+            <td> {{ room.roomType}} </td>
+            <td> {{ room.roomStatus }}</td>
+            <td>
+                <a [routerLink]="['/room/update', room.roomNumber]" class="text-warning"><i class="material-icons" id="edit">&#xf88d;</i></a>&nbsp;
+                <a (click)="deleteRoom(room.roomNumber)" role="button" class="text-danger"><i class="material-icons" id="delete">&#xe92b;</i></a>&nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+<!-- 
+<div class="row">
+    <div class="column">
+        <img src="/assets/images/single.jpg"  style="width:100%">
+            <h3>Single room</h3>
+            <p class="price">Rs.1000/-</p>
+                <p><button>Book now</button></p>
+                </div>
+                <div class="column">
+                    <img src="assets/images/double.jpg"  style="width:100%">
+                        <h3>Double cot</h3>
+                        <p class="price">Rs.2000/-</p>
+                            <p><button>Book now</button></p>
+                            </div>
+                            <div class="column">
+                                <img src="assets/images/deluxe.jpg"  style="width:100%">
+                                    <h3>Deluxe</h3>
+                                    <p class="price">Rs.4000/-</p>
+                                        <p><button>Book now</button></p>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="column">
+                                                <img src="/assets/images/exe.jpg"  style="width:100%">
+                                                    <h3>Executive Suite</h3>
+                                                    <p class="price">Rs.6000/-</p>
+                                                        <p><button>Book now</button></p>
+                                                        </div>
+                                                        <div class="column">
+                                                            <img src="/assets/images/honeymoon.jpg"  style="width:100%">
+                                                                <h3>Honeymoon Suite</h3>
+                                                                <p class="price">Rs.7000/-</p>
+                                                                    <p><button>Book now</button></p>
+                                                                    </div>
+                                                                    <div class="column">
+                                                                        <img src="/assets/images/pres.jpg"  style="width:100%">
+                                                                            <h3>Presidential Suite</h3>
+                                                                            <p class="price">Rs.8000/-</p>
+                                                                                <p><button>Book now</button></p>
+                                                                                </div>
+                                                                                </div> -->
